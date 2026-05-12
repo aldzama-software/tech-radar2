@@ -4,13 +4,6 @@ A NestJS + Next.js + TypeScript + PostgreSQL starter monorepo.
 
 ## Database
 
-PostgreSQL connection details:
-
-- host: `localhost`
-- port: `5433`
-- user: `postgres`
-- password: `princess123`
-- database: `tech-radar`
 
 ## Setup
 
