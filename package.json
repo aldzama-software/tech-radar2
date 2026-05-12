@@ -1,0 +1,16 @@
+{
+  "name": "tech-radar",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace backend run start:dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "dev": "npm run dev:backend"
+  },
+  "dependencies": {
+    "lucide-react": "^1.14.0"
+  }
+}
