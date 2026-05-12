@@ -40,6 +40,7 @@ frontend/
 ## 🎨 Design System
 
 ### Colors
+
 - **Background**: `#F8F9FA` (page), `#FFFFFF` (cards)
 - **Primary**: `#1A73E8` (Google Blue)
 - **Text Primary**: `#1C1C1E`
@@ -49,10 +50,12 @@ frontend/
 - **Danger**: `#DC2626`
 
 ### Typography
+
 - **Body**: Inter (Google Fonts)
 - **Headings**: Plus Jakarta Sans (Google Fonts)
 
 ### Components
+
 - Border radius: 10px (cards), 8px (inputs/buttons), 6px (badges)
 - Subtle shadow: `0 1px 3px rgba(0,0,0,0.06)`
 - No gradients, minimal design
@@ -60,7 +63,9 @@ frontend/
 ## 📄 Pages
 
 ### `/dashboard/admin` - User Management
+
 **Main admin interface with:**
+
 - 4 stats cards (Total, Active, Roles, Last Login)
 - User table with:
   - Avatar initials circles
@@ -71,17 +76,21 @@ frontend/
   - Edit & Delete action buttons
 
 **Modals:**
+
 - **Create/Edit Modal**: Full Name, Email, Password (with toggle), Role (dropdown), Status (toggle), Permissions (checkboxes)
 - **Delete Modal**: Confirmation with warning icon
 
 ### `/dashboard/admin/login-history` - Login History
+
 Simple table view with:
+
 - User name & email
 - Login/Logout timestamps
 - IP Address
 - Status (Success/Failed)
 
 ### Navigation Pages (Placeholders)
+
 - `/dashboard` - Dashboard home
 - `/dashboard/access-control` - Access Control
 - `/dashboard/settings` - Settings
@@ -89,20 +98,24 @@ Simple table view with:
 ## 🧩 Components
 
 ### `Sidebar.tsx`
+
 - Fixed left sidebar (240px)
 - Navigation links with active state
 - User profile footer
 
 ### `AdminLayout.tsx`
+
 - Page title & breadcrumbs
 - Header action slot
 - Main content area
 
 ### `StatsRow.tsx`
+
 - 4 metric cards in responsive grid
 - Icons from lucide-react
 
 ### `UserTable.tsx`
+
 - Search input with icon
 - Role filter dropdown
 - Hover effects
@@ -110,6 +123,7 @@ Simple table view with:
 - Edit/Delete icon buttons
 
 ### `UserModal.tsx`
+
 - Form fields with labels
 - Password visibility toggle
 - Status toggle switch
@@ -117,6 +131,7 @@ Simple table view with:
 - Modal overlay with smooth animation
 
 ### `DeleteModal.tsx`
+
 - Warning icon
 - User name confirmation text
 - Cancel/Delete buttons
@@ -135,6 +150,7 @@ Simple table view with:
 ## 🚀 Usage
 
 ### Start Development
+
 ```bash
 npm install
 npm run dev:frontend
@@ -143,13 +159,17 @@ npm run dev:frontend
 Visit `http://localhost:3001` - redirects to `/dashboard/admin`
 
 ### Dummy Data
+
 All data is static and defined in `lib/admin-data.ts`:
+
 - 5 sample users with different roles
 - 8 login history entries
 - Color-coded role system
 
 ### TypeScript Types
+
 See `types/admin.ts` for all interfaces:
+
 - `User` - User account data
 - `UserRole` - Role types (Admin, Executive, Project Manager, Tech)
 - `UserStatus` - Active/Inactive
@@ -159,6 +179,7 @@ See `types/admin.ts` for all interfaces:
 ## 📝 Next Steps
 
 To connect to the backend API:
+
 1. Update `lib/admin-data.ts` with API calls instead of dummy data
 2. Replace modals' `onSave` handlers with API mutations
 3. Add error handling and loading states
@@ -167,6 +188,7 @@ To connect to the backend API:
 ## 📱 Responsive Behavior
 
 The layout maintains functionality down to 1280px. For smaller screens, consider:
+
 - Collapsible sidebar
 - Stack stats in 2x2 grid
 - Horizontal scroll on table
